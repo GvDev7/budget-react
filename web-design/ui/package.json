@@ -1,0 +1,15 @@
+{
+  "name": "gvd-views",
+  "version": "1.0.0",
+  "description": "portfolio for gvd",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/natures.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

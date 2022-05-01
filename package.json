@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/GvDev7/Project/issues"
   },
-  "homepage": "https://github.com/GvDev7/Project#readme"
+  "homepage": "https://github.com/GvDev7/Project#readme",
+  "dependencies": {
+    "@angular/cli": "^13.0.0"
+  }
 }

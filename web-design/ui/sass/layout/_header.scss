@@ -1,0 +1,60 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        74deg,
+        rgba($secondary-color-light, 0.74),
+        rgba($secondary-color-dark, 0.74)), 
+        url(../image/nature-travel-images/cristina-gottardi-CSpjU6hYo_0-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 74vh, 0 100%);
+    position: relative;
+
+    &__logo-box {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    &__logo {
+        height: 100px;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    &__heading-primary {
+        color: rgb(200, 252, 200);
+        text-transform: uppercase;
+        margin-bottom: 40px;
+    }
+    
+    &__heading-primary-main {
+        display: block;
+        font-size: 40px;
+        letter-spacing: 10px;
+        animation-name: moveInRight;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+    }
+
+    &__heading-primary-sub {
+        display: block;
+        font-size: 15px;
+        letter-spacing: 20px;
+        animation-name: moveInLeft;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+    }
+
+
+}

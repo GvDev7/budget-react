@@ -1,0 +1,57 @@
+.section-about {
+    background-color: $choosen-light-grey;
+    padding: 20rem 0;
+    margin-top: -30vh;
+}
+
+.section-features {
+    padding: 10rem 0;
+    background-image: linear-gradient(
+        44deg,
+        rgba($secondary-color-light, 0.74),
+        rgba($secondary-color-dark, 0.74)), 
+        url(../image/nature-travel-images/agustin-diaz-gargiulo-7F65HDP0-E0-unsplash.jpg);
+    background-size: cover;
+    margin-top: -8rem;
+
+    transform: skewY(-7deg);
+
+    & > * {
+        transform: skewY(7deg);
+    }
+}
+
+.section-tours {
+    background-color: $choosen-light-grey;
+    padding: 20rem 0 30rem 0;
+    margin-top: -30vh;
+}
+
+.section-stories {
+    position: relative;
+    padding: 15rem 0;
+}
+
+.section-booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(74deg, $primary-color, $secondary-color-light);
+}
+
+.book {
+    background-image: linear-gradient(105deg, 
+                        rgba($fifth-color-light, .9) 0%,
+                        rgba($fifth-color-light, .9) 50%,  
+                        transparent 50%),
+                        url(../image/nature-travel-images/julian-timmerman-Fn27DlI8bZ8-unsplash.jpg);
+    background-size: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba($choosen-black, .5);
+    background-position: center;
+
+    height: 35rem;
+
+    &__form {
+        width: 50%;
+        padding: 3rem;
+    }
+}

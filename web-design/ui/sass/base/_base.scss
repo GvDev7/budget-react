@@ -1,0 +1,16 @@
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set Foundational Styling for program */
+body {
+    font-family: "Caveat", cursive;
+    font-size: 16px;
+    line-height: 1.7;
+    color: $choosen-grey;
+    padding: 30px;
+}

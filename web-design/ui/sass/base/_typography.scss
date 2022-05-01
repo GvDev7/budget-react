@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
+
+.heading-secondary {
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, $secondary-color-light, $secondary-color-dark);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    transition: all .2s;
+
+    &:hover {
+        transform: skewY(10deg) skewX(2deg) scale(.8);
+        text-shadow: .5rem 1rem 2rem rgba($color: $choosen-black, $alpha: 2.0);
+    }
+}
+
+.heading-tertiary {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.paragraph {
+    font-size: 1.4rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
+
