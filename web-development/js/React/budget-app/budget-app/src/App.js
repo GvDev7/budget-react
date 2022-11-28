@@ -1,70 +1,27 @@
-import { Button, ButtonGroup, ButtonOr, Container, Form, FormGroup, FormInput, Grid, GridColumn, GridRow, Header, Icon, Segment, Statistic, StatisticLabel, StatisticValue } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
 import './App.css';
+import DisplayBalance from './components/DisplayBalance';
+import MainHeader from './components/MainHeader';
+import NewEntryForm from './components/NewEntryForm';
+import AccountBalance from './components/AccountBalance';
+import EntryLine from './components/EntryLine';
 
 function App() {
+
   return (
     <Container>
-      <Header as='h1' textAlign='center'>GvDev Budget App</Header>
+      <MainHeader title="GvDev Budget App" textAlign='center'/>
 
-      <Statistic size='small'>
-        <StatisticLabel>Your Balance:</StatisticLabel>
-        <StatisticValue>1,111.11</StatisticValue>
-      </Statistic>
+      <AccountBalance title='Your Balance: ' value='1,111.11'/>
 
-      <Segment textAlign='center'>
-        <Grid columns={2} divided>
-          <GridRow>
-            <GridColumn>
-              <Statistic size='tiny' color='green'>
-                <StatisticLabel style={{textAlign:"left"}}>
-                  Income: 
-                </StatisticLabel>
-                <StatisticValue>
-                  7,400
-                </StatisticValue>
-              </Statistic>
-            </GridColumn>
-            <GridColumn>
-              <Statistic size='tiny' color='red'>
-                <StatisticLabel>
-                  Expenses:
-                </StatisticLabel>
-                <StatisticValue>
-                  2,151.90
-                </StatisticValue>
-              </Statistic>
-            </GridColumn>
-          </GridRow>
-        </Grid>
-      </Segment>
+      <DisplayBalance />
 
-      <Header as='h3'>History</Header>
-      <Segment color='red'>
-        <Grid columns={3} textAlign="right">
-          <GridRow>
-            <GridColumn textAlign='left' width={10}>Fast Food</GridColumn>
-            <GridColumn width={3}>$10.00</GridColumn>
-            <GridColumn width={3}>
-              <Icon name='edit' />
-              <Icon name='trash'/>
-            </GridColumn>
-          </GridRow>
-        </Grid>
-      </Segment>
+      <MainHeader title='History' type='h3' textAlign='left'/>
 
-      <Header as='h3'>Add Transaction</Header>
-      <Form unstackable>
-        <FormGroup>
-          <FormInput placeholder='What did you buy?...' icon='tags' width={10} label='Description' />
-          <FormInput label='Value' placeholder='100.00' icon='dollar' iconPosition='left' width={6}/>
-        </FormGroup>
-
-        <ButtonGroup style={{marginTop:20}}>
-          <Button>Cancel</Button>
-          <ButtonOr/>
-          <Button primary>Ok</Button>
-        </ButtonGroup>
-      </Form>
+      <EntryLine item='Fast Food' amount='10.00' isExpense/>
+      <EntryLine item='App completion' amount='50,000.00' />
+      <MainHeader title='Add Transaction' type='h3' />
+      <NewEntryForm />
     </Container>
   );
 }
