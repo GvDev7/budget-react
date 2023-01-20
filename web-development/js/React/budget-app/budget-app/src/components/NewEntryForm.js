@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, FormGroup, FormInput } from 'semantic-ui-react';
 import ButtonSave from './Button';
 
 function NewEntryForm() {
+  const [state, setState] = useState()
   return (
     <Form unstackable>
         <FormGroup>

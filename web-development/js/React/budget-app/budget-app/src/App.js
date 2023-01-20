@@ -1,12 +1,37 @@
 import { Container } from 'semantic-ui-react';
-import './App.css';
+import { useState } from 'react';
 import DisplayBalance from './components/DisplayBalance';
 import MainHeader from './components/MainHeader';
 import NewEntryForm from './components/NewEntryForm';
 import AccountBalance from './components/AccountBalance';
-import EntryLine from './components/EntryLine';
+import EntryLines from './components/EntryLines';
 
 function App() {
+  var InitialEntries = [
+    {
+      item:'Work income',
+      amount:'2000.00',
+      isExpense: false,
+      id: 1
+    }, {
+      item: 'Water Bill',
+      amount: '100.00',
+      isExpense: true,
+      id: 2
+    },
+    {
+      item:"Rent",
+      amount: '800.70',
+      isExpense: true,
+      id: 3
+    }
+  ]  
+  const [entries, setEntries] = useState(InitialEntries);
+
+  const deleteEntry = (id) => {
+    const result = entries.filter((entry) => entry.id !== id);
+    setEntries(result);
+  }
 
   return (
     <Container>
@@ -18,8 +43,8 @@ function App() {
 
       <MainHeader title='History' type='h3' textAlign='left'/>
 
-      <EntryLine item='Fast Food' amount='10.00' isExpense/>
-      <EntryLine item='App completion' amount='50,000.00' />
+      <EntryLines entries={entries} deleteEntry={deleteEntry}/>
+
       <MainHeader title='Add Transaction' type='h3' />
       <NewEntryForm />
     </Container>
